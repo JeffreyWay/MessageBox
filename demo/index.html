@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="../css/message.css">
+</head>
+<body>
+
+<a href="#">Some Destructive Action</a>
+
+<script src="../libs/jquery/jquery.js"></script>
+<script src="../src/MessageBox.js"></script>
+
+<script>
+// $.message('The most basic usage.');
+$.message('Message box with settings.', { icon: 'setting', buttons: ['Yes', 'No', 'Cancel']});
+
+var showMessage = function(e) {
+	e.preventDefault();
+
+	$.message(
+		'Are you sure? If you proceed, a destructive action will occur. Click Yes to continue.',
+		{
+			buttons: ['Yes', 'Cancel'],
+			icon: 'alert',
+			callback: function(buttonVal) {
+				console.log('You clicked: ' + buttonVal);
+				console.log(this);
+			}
+		}
+	);
+};
+
+$('a').on('click', showMessage);
+
+</script>
+</body>
+</html>

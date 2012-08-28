@@ -1,10 +1,6 @@
-/*
- * MessageBox
- * https://github.com/JeffreyWay/MessageBox
- *
- * Copyright (c) 2012 Jeffrey Way
- * Licensed under the GPL license.
- */
+/*! Message Box jQuery Plugin - v0.1.0 - 2012-08-28
+* https://github.com/JeffreyWay/MessageBox
+* Copyright (c) 2012 Jeffrey Way; Licensed GPL */
 
 (function($) {
 

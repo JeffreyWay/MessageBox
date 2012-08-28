@@ -1,0 +1,76 @@
+.message-box {
+	background: white;
+
+	-webkit-box-shadow: 2px 2px 10px #999;
+	box-shadow: 2px 2px 10px #999;
+
+	border-radius: 6px;
+	width: 350px;
+	padding: 20px 30px 0;
+	font-family: sans-serif;
+	font-size: 12px;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+
+	line-height: 1.5em;
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+}
+
+.message-box p {
+	padding-left: 90px;
+	min-height: 62px; /* don't clip the image */
+	margin-top: 0;
+}
+
+.message-box-buttons {
+	background: #e3e3e3;
+	border-top: 1px solid #c5c5c5;
+	margin: 30px -30px 0;
+	padding: 6px 20px;
+	overflow: hidden;
+}
+
+.message-box-buttons input {
+	float: right;
+	border-radius: 4px;
+	margin-left: 10px;
+	background: white;
+	border: 1px solid #C5C5C5;
+	cursor: pointer;
+	padding: 7px 9px;
+}
+
+.message-box-buttons input:hover,.message-box-buttons input:focus {
+	outline: none;
+	border: 1px solid #999;
+}
+
+.message-box-buttons input:active {
+	background: #e3e3e3;
+}
+
+
+.message-box-alert {
+	background: url('../images/icons/png/64x64/delete.png') 30px 17px no-repeat;
+}
+
+.message-box-accept {
+	background: url('../images/icons/png/64x64/accept.png') 30px 17px no-repeat;
+}
+
+.message-box-info {
+	background: url('../images/icons/png/64x64/info.png') 30px 17px no-repeat;
+}
+
+.message-box-notification {
+	background: url('../images/icons/png/64x64/comment.png') 30px 17px no-repeat;
+}
+
+.message-box-setting {
+	background: url('../images/icons/png/64x64/process.png') 30px 17px no-repeat;
+}
