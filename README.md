@@ -3,14 +3,18 @@
 Simple plugin for displaying custom message boxes to the user.
 
 ## Getting Started
-Download the [production version][min] or the [development version][max].
+Download the [production version][min] or the [development version][max], as well as the [associated stylesheet][style] and [images][imgs].
 
 [min]: https://raw.github.com/JeffreyWay/MessageBox/master/dist/MessageBox.min.js
 [max]: https://raw.github.com/JeffreyWay/MessageBox/master/dist/MessageBox.js
+[style]: https://raw.github.com/JeffreyWay/MessageBox/master/css/message.css
+[imgs]: https://github.com/JeffreyWay/MessageBox/tree/master/images
 
 In your web page:
 
 ```html
+<link rel="stylesheet" href="css/message.css">
+
 <script src="jquery.js"></script>
 <script src="MessageBox.min.js"></script>
 <script>
@@ -20,7 +24,7 @@ $.message('The most basic usage.');
 
 Or, to specify an icon and buttons:
 
-```
+```js
 <script>
 $.message(
 	'Message box with settings.',
