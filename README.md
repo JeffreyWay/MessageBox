@@ -59,7 +59,7 @@ Pass an array, where each item represents a button that should be displayed in t
 $.message('Here is my first message box.');
 ```
 
-![image](docs/images/basic.jpeg)
+![image](https://raw.github.com/JeffreyWay/MessageBox/master/docs/images/basic.jpeg)
 
 
 #### With Icon
@@ -67,7 +67,7 @@ $.message('Here is my first message box.');
 $.message('Here is another message.', { icon: 'alert'});
 ```
 
-![image](docs/images/icon.jpeg)
+![image](https://raw.github.com/JeffreyWay/MessageBox/master/docs/images/icon.jpeg)
 
 
 #### Specifying Buttons
@@ -75,7 +75,7 @@ $.message('Here is another message.', { icon: 'alert'});
 $.message('Are you sure that you wish to proceed? If so, please click "Yes."', { icon: 'setting', buttons: ['Yes', 'No', 'Cancel']});
 ```
 
-![image](docs/images/settings.jpeg)
+![image](https://raw.github.com/JeffreyWay/MessageBox/master/docs/images/settings.jpeg)
 
 
 #### Adding a Callback
