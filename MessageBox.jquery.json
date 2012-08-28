@@ -1,0 +1,29 @@
+{
+  "name": "MessageBox",
+  "title": "Message Box jQuery Plugin",
+  "description": "Simple plugin for displaying custom message boxes to the user.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/JeffreyWay/MessageBox",
+  "author": {
+    "name": "Jeffrey Way",
+    "email": "jeffrey@envato.com",
+    "url": "http://jeffrey-way.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JeffreyWay/MessageBox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JeffreyWay/MessageBox/issues"
+  },
+  "licenses": [
+    {
+      "type": "GPL",
+      "url": "https://github.com/JeffreyWay/MessageBox/blob/master/LICENSE-GPL"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">= 1.6"
+  },
+  "keywords": []
+}
