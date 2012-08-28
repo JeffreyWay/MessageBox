@@ -12,53 +12,90 @@ In your web page:
 
 ```html
 <script src="jquery.js"></script>
-<script src="dist/MessageBox.min.js"></script>
+<script src="MessageBox.min.js"></script>
 <script>
-jQuery(function($) {
-  $.awesome(); // "awesome"
-});
+$.message('The most basic usage.');
 </script>
 ```
 
-## Documentation
-_(Coming soon)_
+Or, to specify an icon and buttons:
+
+```
+<script>
+$.message(
+	'Message box with settings.',
+	{
+		icon: 'setting',
+		buttons: ['Yes', 'No', 'Cancel'],
+		callback: function(buttonVal) {
+			// buttonVal = Yes | No | Cancel
+			// this = instance
+		}
+	}
+);
+</script>
+```
+
+### Icon Choices
+
+- setting
+- info
+- notification
+- alert
+- accept
+
+These are the built-in choices, however, you can specify any string as the value for `icon`. That value will then be applied to a new class: `message-box-VALUE_YOU_PROVIDED`. So, if you set `icon: mine`, a class of `message-box-mine` will be applied. You can then set a custom background image, accordingly. Refer to the icons directory in this repo for a variety of choices.
+
+### Button Options
+
+Pass an array, where each item represents a button that should be displayed in the message box.
+
+
 
 ## Examples
-_(Coming soon)_
 
-## Release History
-_(Nothing yet)_
+#### Basic Usage
+```js
+$.message('Here is my first message box.');
+```
+
+![image](https://www.evernote.com/shard/s14/sh/b114cd05-1039-4c3a-9b43-f982e92cb105/9441bf9cc6b78bf7538f905820a3af5a/res/9777f89c-84ee-4471-bb93-4d8969dd6d9d/index.html%23-20120828-170445.jpg.jpg)
+
+
+#### With Icon
+```js
+$.message('Here is another message.', { icon: 'alert'});
+```
+
+![image](https://www.evernote.com/shard/s14/sh/1eedfaef-2d30-4d9e-9fe0-e8ee0b49e794/bb6bee0f1cd418d9b5a4c1a7c87023f7/res/e4cda164-096d-44d1-933a-bc75baee10f2/index.html%23-20120828-170545.jpg.jpg)
+
+
+#### Specifying Buttons
+```js
+$.message('Are you sure that you wish to proceed? If so, please click "Yes."', { icon: 'setting', buttons: ['Yes', 'No', 'Cancel']});
+```
+
+![image](https://www.evernote.com/shard/s14/sh/84f50d8c-2a56-4337-b186-491c7b2ed7ea/3e7e7e35082d52a5b7223d5d118c6248/res/ac3895d4-1790-46f2-9775-de1f2b7ab682/index.html%23-20120828-170758.jpg.jpg)
+
+
+#### Adding a Callback
+```js
+$.message(
+	'Are you sure?',
+	{ 
+		icon: 'setting',
+		buttons: ['Yes', 'No'],
+		callback: function(buttonVal) {
+			if ( buttonVal === 'Yes' ) {
+				$.message('You clicked Yes! Now you\'d proceed, accordingly.');
+				console.log(buttonVal, this);
+			}
+		}
+	}
+);
+```
+
 
 ## License
 Copyright (c) 2012 Jeffrey Way  
 Licensed under the GPL license.
-
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
-
-### Important notes
-Please don't edit files in the `dist` subdirectory as they are generated via grunt. You'll find source code in the `src` subdirectory!
-
-While grunt can run the included unit tests via PhantomJS, this shouldn't be considered a substitute for the real thing. Please be sure to test the `test/*.html` unit test file(s) in _actual_ browsers.
-
-### Installing grunt
-_This assumes you have [node.js](http://nodejs.org/) and [npm](http://npmjs.org/) installed already._
-
-1. Test that grunt is installed globally by running `grunt --version` at the command-line.
-1. If grunt isn't installed globally, run `npm install -g grunt` to install the latest version. _You may need to run `sudo npm install -g grunt`._
-1. From the root directory of this project, run `npm install` to install the project's dependencies.
-
-### Installing PhantomJS
-
-In order for the qunit task to work properly, [PhantomJS](http://www.phantomjs.org/) must be installed and in the system PATH (if you can run "phantomjs" at the command line, this task should work).
-
-Unfortunately, PhantomJS cannot be installed automatically via npm or grunt, so you need to install it yourself. There are a number of ways to install PhantomJS.
-
-* [PhantomJS and Mac OS X](http://ariya.ofilabs.com/2012/02/phantomjs-and-mac-os-x.html)
-* [PhantomJS Installation](http://code.google.com/p/phantomjs/wiki/Installation) (PhantomJS wiki)
-
-Note that the `phantomjs` executable needs to be in the system `PATH` for grunt to see it.
-
-* [How to set the path and environment variables in Windows](http://www.computerhope.com/issues/ch000549.htm)
-* [Where does $PATH get set in OS X 10.6 Snow Leopard?](http://superuser.com/questions/69130/where-does-path-get-set-in-os-x-10-6-snow-leopard)
-* [How do I change the PATH variable in Linux](https://www.google.com/search?q=How+do+I+change+the+PATH+variable+in+Linux)
